@@ -81,7 +81,10 @@ INPUT C:\Users\samue\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tf
 INPUT C:\Users\samue\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
 OUTPUT Sacramentos.pdf
 INPUT C:\Users\samue\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT C:\Users\samue\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1000.tfm
 INPUT Sacramentos.aux
+INPUT C:\Users\samue\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
+INPUT C:\Users\samue\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
 INPUT C:\Users\samue\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\samue\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\samue\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
