@@ -1,3 +1,91 @@
 \section*{Problema 2}
 Resuelva la ecuación diferencial en (2) por medio de la transformada de Laplace. 
 Su solución $T(t)$ dependerá de $h$.
+
+\begin{equation}
+    T_m(t) = 50 + 20 U(h - t)
+\end{equation}
+\begin{equation}
+    \frac{dT}{dt} = k(T - T_m(t))
+\end{equation}
+
+\begin{center}
+
+Sustituyendo (2) en (3),\\
+\begin{align*}
+    \frac{dT}{dt} = k\bigl(T - 50 - 20U(h - t)\bigr) 
+\end{align*}
+Con $k = -2\ln{\left(\frac{34}{35}\right)}$ y $T(0) = 85$\\ 
+\vspace{12pt}
+
+
+\textbf{Solución}\\
+\begin{equation*}
+    \mathscr{L}\biggl\{\frac{dT}{dt} = kT(t)- 50k - 20kU(t-h)\biggr\}
+\end{equation*}
+
+\begin{equation*}
+    sT(s) - T(0) = kT(s) - \frac{50k}{s} - \frac{20ke^{-hs}}{s}
+\end{equation*}
+
+\begin{equation*}
+    (s - k)T(s) = 85 - \frac{50k}{s} - \frac{20ke^{-hs}}{s}
+\end{equation*}
+
+\begin{equation*}
+    T(t) = \mathscr{L}^{-1} \biggl\{\frac{85}{s-k} - \frac{50k}{s(s-k)} - \frac{20ke^{-hs}}{s(s-k)}\biggr\}
+\end{equation*}
+
+\begin{equation*}
+    \mathscr{L}^{-1} \biggl\{ \frac{85}{s-k} \biggr\} = 85e^{kt}
+\end{equation*} 
+
+\begin{equation*}
+    f(t) = \mathscr{L}^{-1} \biggl\{ -\frac{50k}{s(s-k)} \biggr\} = \mathscr{L}^{-1} \biggl\{ \frac{A}{s} + \frac{B}{s-k} \biggr\}
+\end{equation*}
+
+$-50k = A(s-k) + B(s)$\\ 
+\vspace{8pt}
+$A + B = 0$\\ 
+\vspace{8pt}
+$-A = -50$\\ 
+\vspace{8pt}
+$A = 50, B = -50$\\ 
+\vspace{8pt}
+
+\begin{equation*}
+    f(t) = \mathscr{L}^{-1} \biggl\{ \frac{50}{s} - \frac{50}{s-k} \biggr\} = 50 - 50e^{kt}
+\end{equation*}
+
+\begin{equation*}
+    g(t) = \mathscr{L}^{-1} \biggl\{ -\frac{20ke^{-hs}}{s(s-k)} \biggr\} = \mathscr{L}^{-1} \biggl\{ e^{-hs}\left(-\frac{20k}{s(s-k)}\right) \biggr\} = U(t-h)h(t-h)
+\end{equation*}
+
+\begin{equation*}
+    g(t-h) = \mathscr{L}_{t-h}^{-1} \biggl\{ -\frac{20k}{s(s-k)} \biggr\} = \mathscr{L}_{t-h}^{-1} \biggl\{ \frac{A}{s} + \frac{B}{s-k} \biggr\}
+\end{equation*}
+
+$-20k = A(s-k) + B(s)$\\ 
+\vspace{8pt}
+$A + B = 0 $\\ 
+\vspace{8pt}
+$-A = -20$\\ 
+\vspace{8pt}
+$A = 20, B = -20$
+
+\begin{equation*}
+    h(t-h) = \mathscr{L}_{t-h}^{-1} \biggl\{ \frac{20}{s} - \frac{20}{s-k} \biggr\} = 20 - 20e^{k(t-h)}
+\end{equation*}
+
+\begin{equation*}
+    g(t) = U(t-h)\left( 20 - 20e^{k(t-h)}\right)
+\end{equation*}
+
+\begin{equation*}
+    T(t) = 85e^{kt} + 50 - 50e^{kt} + U(t-h)\cdot\left( 20 - 20e^{k(t-h)}\right)
+\end{equation*}
+
+\begin{equation*}
+    T(t) = 35e^{kt} + 20U(t-h)\cdot\left( 1 - e^{k(t-h)}\right) + 50; k = -2\ln{\left(\frac{34}{35}\right)}
+\end{equation*}
+\end{center}
