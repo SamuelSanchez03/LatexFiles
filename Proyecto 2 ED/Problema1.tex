@@ -1,0 +1,71 @@
+\section*{Problema 1}
+Después de reflexionar, Diff decide comenzar por suponer que el señor Wood fue asesinado en el refrigerador. 
+¿Más o menos a qué hora murió?
+
+\begin{equation}
+    \frac{dT}{dt} = k(T - T_m), t > 0
+\end{equation}
+\begin{center}
+$T(0) = 85, t = 0 = 6:00$am\\
+\vspace{8pt}
+
+$T(-\frac{1}{2}) = 84$\\
+\vspace{8pt}
+
+$T_m = 50$\\
+\vspace{8pt}
+
+$T_{vivo} = 98$\\ 
+\vspace{12pt}
+
+
+\textbf{Solución}\\ 
+\begin{equation*}
+\frac{dT}{T - T_m} = kdt
+\end{equation*}
+\vspace{2pt}
+\begin{equation*}
+\int{\frac{dT}{T - T_m}} = \int{kdt}
+\end{equation*}
+\vspace{2pt}
+\begin{equation*}
+\ln{(T - 50)} = kt + c
+\end{equation*}
+\vspace{2pt}
+\begin{equation*}
+T = ce^{kt} + 50;
+\end{equation*}
+\vspace{2pt}
+
+Con la condicion inicial $T(0) = 85$,\\
+\vspace{8pt}
+$T(0) = ce^{0t} + 50 = 85$\\
+\vspace{8pt}
+$c + 50 = 85$\\
+\vspace{8pt}
+$c = 35$\\
+\vspace{8pt}
+$T = 35e^{kt} + 50$\\
+\vspace{12pt}
+
+Sustituyendo $t = -\frac{1}{2}$ y $T(-\frac{1}{2}) = 84$,\\
+\vspace{8pt}
+$84 = 35e^{-\frac{1}{2}k} + 50$\\
+\vspace{8pt}
+$35e^{-\frac{1}{2}k} = 34$\\
+\vspace{8pt}
+$-\frac{k}{2} = \ln{(\frac{34}{35})}$\\ 
+\vspace{8pt}
+$k = -2\ln{(\frac{34}{35})}$\\ 
+\vspace{12pt}
+
+Sustituyendo $k = -2\ln{(\frac{34}{35})}$ y $T_{vivo} = 98$\\
+\vspace{8pt}
+$99 = 35e^{kt} + 50$\\ 
+\vspace{8pt}
+$e^{kt} = \frac{49}{35}$\\ 
+\vspace{8pt}
+$t = \frac{\ln{(\frac{49}{35})}}{-2\ln{(\frac{34}{35})}} = 5.803$ hrs = 5:48\\ 
+\vspace{8pt}
+$\therefore$ Murió a las 0:12 hrs
+\end{center}

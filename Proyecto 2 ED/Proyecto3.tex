@@ -1,26 +1,46 @@
-\documentclass[letter paper, 12pt]{article}
-\usepackage{tikz, pgfplots, babel}
+\documentclass[letter paper, 12pt]{report}
+\usepackage{tikz, pgfplots, babel, graphicx, amsmath, amssymb}
 \selectlanguage{spanish}
 
-\title{Proyecto 3}
-\date{}
-
 \begin{document}
-\maketitle
-\section*{Problema 1}
-Después de reflexionar, Diff decide comenzar por suponer que el señor Wood fue asesinado en el refrigerador. 
-¿Más o menos a qué hora murió?
-\section*{Problema 2}
-Resuelva la ecuación diferencial en (2) por medio de la transformada de Laplace. 
-Su solución $T(t)$ dependerá de $h$.
-\section*{Problema 3 (CAS)}
-Completa la tabla de Diff. En particular, explique por qué los valores grandes de $h$ dan la misma aproximación para la hora de la muerte.
-\section*{Problema 4}
-¿A quién quiere interrogar Diff y por qué?
 
-\begin{equation}
-    \frac{dT}{dt} = k(T - T_m), t > 0
-\end{equation}
+\begin{titlepage}
+   \begin{center}
+        \vspace*{1cm}
+
+        \textbf{Proyecto 3}
+
+        \vspace{0.5cm}
+            Asesinato en el Mayfair
+                
+        \vspace{1.5cm}
+
+        \textbf{Samuel Iván Sánchez Salazar}
+
+        \vfill
+                
+        Ecuaciones Diferenciales\\ 
+        MCI Luis Alonso Romo Mercado
+                
+        \vspace{0.5cm}
+        
+        \includegraphics[width=0.2\textwidth]{logo}
+
+        \vspace{0.5cm}
+                
+        Universidad Panamericana\\ 
+        Facultad de Ingeniería\\
+        Ingeniería en Inteligencia Artificial\\ 
+        28 de Noviembre 2022
+            
+   \end{center}
+\end{titlepage}
+
+\include{Introduccion.tex}
+\include{Problema1.tex}
+\include{Problema2.tex}
+\include{Problema3.tex}
+\include{Problema4.tex}
 
 \begin{equation}
     T_m(t) = 50 + 20  U(t - h)
