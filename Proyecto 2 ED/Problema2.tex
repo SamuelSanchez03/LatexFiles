@@ -62,16 +62,16 @@ $A = 50, B = -50$\\
 \end{equation*}
 
 \begin{equation*}
-    g(t-h) = \mathscr{L}_{t-h}^{-1} \biggl\{ -\frac{20k}{s(s-k)} \biggr\} = \mathscr{L}_{t-h}^{-1} \biggl\{ \frac{A}{s} + \frac{B}{s-k} \biggr\}
+    g(t-h) = \mathscr{L}_{t-h}^{-1} \biggl\{ -\frac{20k}{s(s-k)} \biggr\} = \mathscr{L}_{t-h}^{-1} \biggl\{ \frac{C}{s} + \frac{D}{s-k} \biggr\}
 \end{equation*}
 
-$-20k = A(s-k) + B(s)$\\ 
+$-20k = C(s-k) + D(s)$\\ 
 \vspace{8pt}
-$A + B = 0 $\\ 
+$C + D = 0 $\\ 
 \vspace{8pt}
-$-A = -20$\\ 
+$-C = -20$\\ 
 \vspace{8pt}
-$A = 20, B = -20$
+$C = 20, D = -20$
 
 \begin{equation*}
     h(t-h) = \mathscr{L}_{t-h}^{-1} \biggl\{ \frac{20}{s} - \frac{20}{s-k} \biggr\} = 20 - 20e^{k(t-h)}
@@ -85,7 +85,7 @@ $A = 20, B = -20$
     T(t) = 85e^{kt} + 50 - 50e^{kt} + U(t-h)\cdot\left( 20 - 20e^{k(t-h)}\right)
 \end{equation*}
 
-\begin{equation*}
+\begin{equation}
     T(t) = 35e^{kt} + 20U(t-h)\cdot\left( 1 - e^{k(t-h)}\right) + 50; k = -2\ln{\left(\frac{34}{35}\right)}
-\end{equation*}
+\end{equation}
 \end{center}
