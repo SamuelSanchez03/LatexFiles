@@ -31,4 +31,20 @@ Completa la tabla de Diff. En particular, explique por qué los valores grandes 
         2 & ~9.0210 & 4:00 & 18:59\\
         \hline
     \end{tabular}
+
+    \vspace{10pt}
+
+    \begin{tikzpicture}
+    \begin{axis}[xmax = 15, xmin = -15, ymax = 100, ymin = 0, axis x line = bottom, axis y line=middle, legend pos=outer north east, xlabel = $h$, ylabel = $t$]
+    \addplot[color = red, samples=1000, domain=-15:20]{ln(29/(35-20*exp(2*ln(34/35)*x)))/(-2*ln(34/35))};
+    %\addlegendentry{\(Ecuación (4)\)}
+    \end{axis}
+    \end{tikzpicture}
+
+    Gráfica Ecuación (4)\\
+    La Ecuación (4) al despejarla para que $t$ dependa de $h$, tenemos:
+    \begin{equation*}
+        t = \frac{\ln{\left(\frac{29}{35-20e^{-kh}}\right)}}{k}, k = -2\ln{\left(\frac{34}{35}\right)}
+    \end{equation*}
 \end{center} 
+Podemos observar que se trata de una función exponencial inversa por lo que cuando crece $h$, $t$ se hace cada vez más pequeño, por lo que da una hora de muerte cada vez más cercana a la hora en la que se movió el cuerpo. Por otro lado, cuando $h$ decrece, $t$ se hace cada vez más grande, lo que causa que la hora de muerte se aleje cada vez más de la hora en la que se movió el cuerpo y tienda a un sólo valor, aproximándose a las 19 hrs. como hora de la muerte.
